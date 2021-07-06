@@ -2,7 +2,6 @@
   "name": "react-new-repository",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Bohatyrenko.github.io/goit-react-hw-04-movies",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
@@ -41,6 +40,10 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^7.30.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
     "prop-types": "^15.7.2"
   }
 }
