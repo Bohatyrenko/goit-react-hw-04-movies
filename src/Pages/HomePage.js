@@ -15,7 +15,7 @@ class HomePage extends Component {
 
   render() {
     const { movies } = this.state;
-    return <FilmList movies={movies} />;
+    return <FilmList movies={movies} history={this.props.history.location} />;
   }
 }
 
