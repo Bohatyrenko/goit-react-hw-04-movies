@@ -1,10 +1,10 @@
 import { Component } from 'react';
+import { Link, Route } from 'react-router-dom';
 import { getFilmById } from '../services/fetchApi';
 
 class MovieDetailsPage extends Component {
   state = {
     film: {},
-    from: '',
   };
 
   async componentDidMount() {
@@ -15,7 +15,7 @@ class MovieDetailsPage extends Component {
   }
 
   handleGoBack = () => {
-    this.props.history.push(this.props.location.state.from);
+    this.props.history.push(this.props.location?.state?.from || '/');
   };
   render() {
     const { film } = this.state;

@@ -9,6 +9,14 @@ export class MoviesPage extends Component {
     films: [],
   };
 
+  async componentDidMount() {
+    if (this.props.location.state !== null) {
+      const response = await getFilmsByQuery(this.props.location.state.query);
+      console.log('stateQuery', this.props.location.state.query.query);
+      console.log('response', response);
+    }
+  }
+
   handleSubmit = async e => {
     e.preventDefault();
     const response = await getFilmsByQuery(this.state.query);

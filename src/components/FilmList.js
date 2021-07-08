@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Filmlist = ({ movies, history }) => {
+  // console.log('history', history.location.pathname);
   return (
     <ul>
       {movies.map(({ id, title }) => (
@@ -10,7 +11,10 @@ const Filmlist = ({ movies, history }) => {
             to={{
               pathname: `/movies/${id}`,
               // в нижней строчке дописать после id, "from: history.location.pathname" для того чтоб работала кнопка Go back
-              state: { id, from: history.location.pathname },
+              state: {
+                id,
+                from: history.location,
+              },
             }}
           >
             {title}
