@@ -11,10 +11,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
-// const link = React.createElement("a", { href: "reactjs.org" }, "Ссылка");
-// const jsxlink = <a href="reactjs.org">Ссылка</a>;
-// console.log(link);
-// console.log(jsxlink);
-
-// ReactDOM.render(link, document.getElementById("root"));
