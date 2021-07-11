@@ -56,22 +56,18 @@ class MovieDetailsPage extends Component {
             </Link>
           </li>
           <li>
-            {review.lenght > 0 && (
-              <Link
-                to={{
-                  pathname: `${url}/reviews`,
-                  state: this.props.location.state,
-                }}
-              >
-                Reviews
-              </Link>
-            )}
+            <Link
+              to={{
+                pathname: `${url}/reviews`,
+                state: this.props.location.state,
+              }}
+            >
+              Reviews
+            </Link>
           </li>
         </ul>
         <Route path={`${path}/cast`} component={Cast} />
-        {review.lenght > 0 && (
-          <Route path={`${path}/reviews`} component={Reviews} />
-        )}
+        <Route path={`${path}/reviews`} component={Reviews} />
       </>
     );
   }
